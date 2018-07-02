@@ -2,11 +2,9 @@
 what means it is the front end of YouPHPTube. You can watch it running
 at https://demo.youphptube.com/ or https://tutorials.youphptube.com/**
 
-If for any reason you need help to set up the YouPHPTube app or the server, fell free to ask us for help:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**If for any reason you need help to set up the YouPHPTube app or the server, fell free to ask us for help:**
 
-https://www.youphptube.com/services
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**https://www.youphptube.com/services**
 
 Just copy and paste this:
 

@@ -1,3 +1,5 @@
+`Readme <readme.html>`__
+
 Installation
 ~~~~~~~~~~~~
 
@@ -8,17 +10,13 @@ LAMP means Linux Apache Mysql and PHP. Those manuals are great if you
 set it up from scratch.
 
 -  `How to install LAMP, FFMPEG and Git on a fresh Ubuntu 16.x For
-   YouPHPTube version 3.x or
-   older <installUbuntu16Old.html>`__
-   (YPT deprececated)
--  `How to install LAMP, FFMPEG and Git on a fresh Ubuntu 16.x For
    YouPHPTube version 4.x or
-   newer <installUbuntu16.html>`__
+   newer <install/installUbuntu16.html>`__
 -  `How to install LAMP, FFMPEG and Git on a fresh Ubuntu 18.x for
    YouPHPTube version 4.x or
-   newer <installUbuntu18.html>`__
+   newer <install/installUbuntu18.html>`__
 -  `Install YouPHPTube in Debian
-   9.3 <Install-YouPHPTube-in-Debian-9.3>`__
+   9.3 <install/installDebian93.html>`__
 
 Nginx
 ^^^^^
