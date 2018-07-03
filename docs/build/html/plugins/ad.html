@@ -1,0 +1,290 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>VMAP (Video Multiple Ad Playlist) &mdash; YouPHPTube  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> YouPHPTube
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">VMAP (Video Multiple Ad Playlist)</a></li>
+<li><a class="reference internal" href="#vast-video-ad-serving-template">VAST (Video Ad Serving Template)</a></li>
+<li><a class="reference internal" href="#why-these-standards-are-important">Why These Standards Are Important</a><ul>
+<li><a class="reference internal" href="#how-to-use-the-plugin">How to Use the plugin.</a><ul>
+<li><a class="reference internal" href="#create-a-campaign">Create a campaign</a></li>
+<li><a class="reference internal" href="#campaign-list">Campaign List</a></li>
+<li><a class="reference internal" href="#add-videos">Add videos</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#plugin-parameters">Plugin Parameters</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">YouPHPTube</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>VMAP (Video Multiple Ad Playlist)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/plugins/ad.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>We create this plugin based on VMAP and VAST standards</p>
+<div class="section" id="vmap-video-multiple-ad-playlist">
+<h1>VMAP (Video Multiple Ad Playlist)<a class="headerlink" href="#vmap-video-multiple-ad-playlist" title="Permalink to this headline">¶</a></h1>
+<p>VMAP describes when an ad should be played.</p>
+</div>
+<div class="section" id="vast-video-ad-serving-template">
+<h1>VAST (Video Ad Serving Template)<a class="headerlink" href="#vast-video-ad-serving-template" title="Permalink to this headline">¶</a></h1>
+<p>VAST is a Video Ad Serving Template for structuring ad tags that serve
+ads to video players. Using an XML schema, VAST transfers important
+metadata about an ad from the ad server to a video player.</p>
+</div>
+<div class="section" id="why-these-standards-are-important">
+<h1>Why These Standards Are Important<a class="headerlink" href="#why-these-standards-are-important" title="Permalink to this headline">¶</a></h1>
+<p>It is all about scalability. In order for publishers to serve ads across
+multiple platforms / devices with the video player of their choice, a
+common ground to build against is required.</p>
+<div class="section" id="how-to-use-the-plugin">
+<h2>How to Use the plugin.<a class="headerlink" href="#how-to-use-the-plugin" title="Permalink to this headline">¶</a></h2>
+<p>To access the plugin configuration screen you can click on the red
+<strong>Advertising Manager</strong> button on the top of the videos manager or on
+the Plugin button on the right side of the AD_Server plugin on the
+plugin manager</p>
+<p>To have your ad videos playing will need to do two things 1. Create a
+campaign 1. Add videos on your campaign</p>
+<div class="section" id="create-a-campaign">
+<h3>Create a campaign<a class="headerlink" href="#create-a-campaign" title="Permalink to this headline">¶</a></h3>
+<p>Fill all the fields on the lest side and click on the Save button The
+<strong>Max Prints</strong> field when the ad reaches the number of views will no
+longer compete with the display ads queue</p>
+</div>
+<div class="section" id="campaign-list">
+<h3>Campaign List<a class="headerlink" href="#campaign-list" title="Permalink to this headline">¶</a></h3>
+<p>On the right side you can see a list of the campaigns and buttons to add
+videos, see a simple chart about the campaign progress, edit a campaign
+and delete the campaign respectively.</p>
+</div>
+<div class="section" id="add-videos">
+<h3>Add videos<a class="headerlink" href="#add-videos" title="Permalink to this headline">¶</a></h3>
+<p>On the first field type a name of a video, and a list will pop up below,
+choose a video and fill the other fields and click on the green add
+Video button</p>
+<p>the videos choosed here will randomly appear in your campaign</p>
+</div>
+</div>
+</div>
+<div class="section" id="plugin-parameters">
+<h1>Plugin Parameters<a class="headerlink" href="#plugin-parameters" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>start = Check it if an Advertising should appear on the start video
+position;</li>
+<li>mid25Percent = Check it if an Advertising should appear when the
+video position reaches 25% of the full video length;</li>
+<li>mid50Percent = Check it if an Advertising should appear when the
+video position reaches 50% of the full video length;</li>
+<li>mid75Percent = Check it if an Advertising should appear when the
+video position reaches 75% of the full video length;</li>
+<li>end = Check it if an Advertising should appear when the video
+position reaches the end of the full video length;</li>
+</ul>
+<ul class="simple">
+<li>showAdsOnEachVideoView = This defines how often advertisements will
+appear, for example: if it is set to 2, you will see ads each 2
+videos, but if it is set to 1 you will see ads on every video;</li>
+<li>showAdsOnRandomPositions = This will pick random positions to display
+the ads, but it will pic only the positions you have checked above.
+For example, if you want to have 2 random positions, but do not want
+to have videos on the start position, you must uncheck the <em>start</em>
+video position checkbox;</li>
+</ul>
+<ul class="simple">
+<li>skipoffset = This is the percentage where the skip button should
+appear;</li>
+<li>showMarkers = Check it if you want to show the yellow markers on the
+video, where the advertising should appear;</li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Vinzenz Hersche, Daniel Neto.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

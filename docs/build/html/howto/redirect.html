@@ -1,0 +1,306 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CPanel and similiar &mdash; YouPHPTube  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> YouPHPTube
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">CPanel and similiar</a></li>
+<li><a class="reference internal" href="#apache">Apache</a><ul>
+<li><a class="reference internal" href="#htaccess">.htaccess</a><ul>
+<li><a class="reference internal" href="#redirect-www-youphptube-com-to-youphptube-com">Redirect www.youphptube.com to youphptube.com</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#apaches-config-file">Apaches config file</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#nginx">Nginx</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">YouPHPTube</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>CPanel and similiar</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howto/redirect.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>It can be nice to force https by redirect all http-content to it.</p>
+<p>This job is basicly done by the webserver itself and therefore it is a
+job for the administrator, not youphptube.</p>
+<p>We don’t like to force this, because of decrease possibilitys.</p>
+<p><strong>By the way: If you use https, the website-address in your
+videos/configuration.php needs to begin with https:// too.</strong></p>
+<div class="section" id="cpanel-and-similiar">
+<h1>CPanel and similiar<a class="headerlink" href="#cpanel-and-similiar" title="Permalink to this headline">¶</a></h1>
+<p>You can try the downer apache-.htaccess-solution first.</p>
+<p>If this does not work, search in your hosting-menu for a option to
+enable this. There are various, we can not support all - in case of
+questions, ask your hoster.</p>
+</div>
+<div class="section" id="apache">
+<h1>Apache<a class="headerlink" href="#apache" title="Permalink to this headline">¶</a></h1>
+<p>Apache has two possibilitys: edit the <strong>.htaccess</strong>-file or change the
+config from apache itself.</p>
+<div class="section" id="htaccess">
+<h2>.htaccess<a class="headerlink" href="#htaccess" title="Permalink to this headline">¶</a></h2>
+<p>Add those lines to the <strong>begin</strong> of your <strong>.htaccess</strong>-file, which is in
+your <strong>youphptube-folder</strong>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>RewriteEngine On
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+</pre></div>
+</div>
+<p>That’s it. <strong>If you do not find the .htaccess-file</strong>, search for a
+option like “show hidden files”.</p>
+<div class="section" id="redirect-www-youphptube-com-to-youphptube-com">
+<h3>Redirect www.youphptube.com to youphptube.com<a class="headerlink" href="#redirect-www-youphptube-com-to-youphptube-com" title="Permalink to this headline">¶</a></h3>
+<p>There can be failures in view, when you setup youphptube.com but use
+www.youphptube.com. You will have to redirect.</p>
+<p>If you do so, do not forget to change the url in
+videos/configuration.php, in this case to “<a class="reference external" href="https://youphptube.com">https://youphptube.com</a>”.</p>
+<p>Add this to the begin of your .htaccess-file:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.youphptube\.com$ [NC]
+RewriteRule ^(.*)$ https://youphptube.com/$1 [L,R=301]
+</pre></div>
+</div>
+<p>The source is in german, i did not quickfind another doing the same:
+<a class="reference external" href="https://seo-summary.de/301-redirect/">https://seo-summary.de/301-redirect/</a> Untested.</p>
+<p>Tested by author.</p>
+</div>
+</div>
+<div class="section" id="apaches-config-file">
+<h2>Apaches config file<a class="headerlink" href="#apaches-config-file" title="Permalink to this headline">¶</a></h2>
+<p>Under debian and ubuntu, you can find the config-files under
+/etc/apache2/conf-enabled/ .</p>
+<p>There, edit the config for your needs (for example: replace the url).
+The example starts with http (<em>:80-section) and ends with the targeted
+https-connection (</em>:443).</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">VirtualHost</span> <span class="o">*</span><span class="p">:</span><span class="mi">80</span><span class="o">&gt;</span>
+    <span class="n">ServerName</span> <span class="n">www</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span>
+    <span class="n">Redirect</span> <span class="o">/</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">/</span>
+<span class="o">&lt;/</span><span class="n">VirtualHost</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">VirtualHost</span> <span class="o">*</span><span class="p">:</span><span class="mi">443</span><span class="o">&gt;</span>
+    <span class="n">ServerName</span> <span class="n">www</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span>
+    <span class="c1"># ... SSL configuration goes here</span>
+<span class="o">&lt;/</span><span class="n">VirtualHost</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>This solution is more proper and eventualy secure but need more
+expirience and edit than the .htaccess-solution.</p>
+<p>Untested by author.</p>
+<p>Original-source for both solutions:
+<a class="reference external" href="https://stackoverflow.com/questions/4083221/how-to-redirect-all-http-requests-to-https">https://stackoverflow.com/questions/4083221/how-to-redirect-all-http-requests-to-https</a></p>
+</div>
+</div>
+<div class="section" id="nginx">
+<h1>Nginx<a class="headerlink" href="#nginx" title="Permalink to this headline">¶</a></h1>
+<p>This is a redirect-example for nginx. If you use nginx, some more
+expirience is good anyway. The config-files are like always in /etc,
+what’s the exact name for nginx can depend.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>server {
+   listen         80;
+   server_name    my.domain.com;
+   return         301 https://$server_name$request_uri;
+}
+
+server {
+   listen         443 ssl;
+   server_name    my.domain.com;
+   # add Strict-Transport-Security to prevent man in the middle attacks
+   add_header Strict-Transport-Security &quot;max-age=31536000&quot; always;
+
+   [....]
+}
+</pre></div>
+</div>
+<p>This solution is untested, source:
+<a class="reference external" href="https://serverfault.com/questions/67316/in-nginx-how-can-i-rewrite-all-http-requests-to-https-while-maintaining-sub-dom">https://serverfault.com/questions/67316/in-nginx-how-can-i-rewrite-all-http-requests-to-https-while-maintaining-sub-dom</a></p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Vinzenz Hersche, Daniel Neto.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

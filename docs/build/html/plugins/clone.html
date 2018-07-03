@@ -1,0 +1,274 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The clone-plugin &mdash; YouPHPTube  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> YouPHPTube
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">The clone-plugin</a><ul>
+<li><a class="reference internal" href="#the-feature">The Feature</a></li>
+<li><a class="reference internal" href="#the-process">The Process</a></li>
+<li><a class="reference internal" href="#configuration">Configuration</a><ul>
+<li><a class="reference internal" href="#client">Client</a></li>
+<li><a class="reference internal" href="#server">Server</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">YouPHPTube</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>The clone-plugin</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/plugins/clone.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="the-clone-plugin">
+<h1>The clone-plugin<a class="headerlink" href="#the-clone-plugin" title="Permalink to this headline">¶</a></h1>
+<p>This Plugin helps you to clone YouPHPTube sites, it is really helpful
+for backup routines, load balance, etc.</p>
+<p>Check our video tutorial:
+<a class="reference external" href="https://tutorials.youphptube.com/video/backup-or-clone-your-site">https://tutorials.youphptube.com/video/backup-or-clone-your-site</a></p>
+<div class="section" id="the-feature">
+<h2>The Feature<a class="headerlink" href="#the-feature" title="Permalink to this headline">¶</a></h2>
+<p>In this Feature we have two ends. clients (The Clone) and server (The
+Master).</p>
+<p>Important to inform that every time it is cloned the <strong>Client</strong> database
+will be overwritten with the <strong>Server</strong> database, so if you have upload,
+comment or view any video on the client, it will be lost.</p>
+</div>
+<div class="section" id="the-process">
+<h2>The Process<a class="headerlink" href="#the-process" title="Permalink to this headline">¶</a></h2>
+<p>Basically the process is like that …</p>
+<ol class="arabic simple">
+<li>The Client ask to the Server permission to clone him</li>
+<li>The Server Accept the permission</li>
+<li>The Server makes a Dump of his database, and creates a list of its
+videos and images (With the file size and Modification time)</li>
+<li>The Client download the database file from the Server and overwrite
+his own database with the downloaded one</li>
+<li>The Client compare the videos and files list with his own video and
+files and download the new and the modified files.</li>
+<li>The Client notify the Server the Job and the server delete the
+generated dump file</li>
+</ol>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>You will need two YouPHPTube installations (Client and Server),
+with the latest commit on both.</strong></li>
+<li><strong>You must enable the CloneSite Plugin on the Client and on the
+Server</strong></li>
+</ul>
+<div class="section" id="client">
+<h3>Client<a class="headerlink" href="#client" title="Permalink to this headline">¶</a></h3>
+<p>The Client is a YouPHPTube Site Clone</p>
+<p>Follow those steps on your Client</p>
+<ol class="arabic simple">
+<li>Fill the <strong>cloneSiteURL</strong> parameter with the server site</li>
+<li>Click on the Green Button <strong>“Clone Now”</strong></li>
+<li>You may be notified with <em>“The URL … was just added in our server,
+ask the Server Manager to approve this URL on plugins-&gt;Clone
+Site-&gt;Clones Manager (The Blue Button) and Activate your client”</em>. So
+that means your need to approve your client on the Server, otherwise,
+the clone process will start</li>
+</ol>
+</div>
+<div class="section" id="server">
+<h3>Server<a class="headerlink" href="#server" title="Permalink to this headline">¶</a></h3>
+<p>The Server is also a YouPHPTube Site where the clients will be cloned
+from</p>
+<p>To approve clients to clone your site click on the blue button <strong>“Clones
+Manager”</strong> and the on the green button <strong>“Activate”</strong> on the left side
+of the client you want to approve.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Vinzenz Hersche, Daniel Neto.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

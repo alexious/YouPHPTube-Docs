@@ -56,19 +56,20 @@ Configuration
 
 -  `How to update your YouPHPTube <howto/update.html>`__
 -  `Howto Install a new Plugin <howto/installplugin.html>`__
--  `Automatic Thumbs (JPG-GIF) on direct uploaded MP4
-   videos <Automatic-Thumbs-(JPG-GIF)-on-direct-uploaded-MP4-videos>`__
--  `Setting up YouPHPTube to send
-   emails <Setting-up-YouPHPTube-to-send-emails>`__
--  `Redirect http to https <Redirect-http-to-https>`__
+-  `Automatic Thumbs (JPG-GIF) on direct uploaded MP4 videos <Automatic-Thumbs-(JPG-GIF)-on-direct-uploaded-MP4-videos>`__
+-  `Setting up YouPHPTube to send emails <Setting-up-YouPHPTube-to-send-emails>`__
+-  `Redirect http to https <howto/redirect.html>`__
 
 Plugins
 ^^^^^^^
 
-- `Advanced Customization Plugin <plugins/advancedcust.html>`__
-- `AWS S3 on YouPHPTube <plugins/aws.html>`__
-- `Configure LDAP-Plugin <plugins/ldap.html>`__
-- `Cache-Plugin <plugins/cache.html>`__.
+- `Advanced customization plugin <plugins/advancedcust.html>`__
+- `Ad-server-plugin <plugins/ad.html>`__
+- `AWS S3 (paid plugin) <plugins/aws.html>`__
+- `Configure LDAP-plugin <plugins/ldap.html>`__
+- `Cache-plugin <plugins/cache.html>`__.
+- `Clone-plugin <plugins/clone.html>`__.
+- `YPT-wallet-plugin <plugins/wallet.html>`__.
 
 
 Paid plugins, support and development
