@@ -1,0 +1,276 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Create AWS S3 &mdash; YouPHPTube  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> YouPHPTube
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Create AWS S3</a><ul>
+<li><a class="reference internal" href="#configure-s3">Configure S3</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#enable-your-aws-s3-plugin">Enable your AWS_S3 plugin</a><ul>
+<li><a class="reference internal" href="#edit-the-plugin-parameters">Edit the plugin parameters</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#optional-configure-apache-xsendfile">Optional - Configure apache xsendfile</a><ul>
+<li><a class="reference internal" href="#install-apache-xsendfile">Install apache xsendfile</a></li>
+<li><a class="reference internal" href="#configure-your-apache-xsendfile">Configure your apache XSendFile</a></li>
+<li><a class="reference internal" href="#uncomment-your-htaccess-file">Uncomment your .htaccess file</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">YouPHPTube</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Create AWS S3</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/plugins/aws.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="create-aws-s3">
+<h1>Create AWS S3<a class="headerlink" href="#create-aws-s3" title="Permalink to this headline">¶</a></h1>
+<p><strong>Details:</strong> * Only videos will be saved on S3, all images will be
+saved locally. * Dummy video with 10 bytes will be locally saved, for
+system reference only.</p>
+<div class="section" id="configure-s3">
+<h2>Configure S3<a class="headerlink" href="#configure-s3" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Log into your console and go to the amazon s3 tool and click create
+bucket.</li>
+<li>Create a user with credentials who has permissions to read/write to
+this new bucket. Also add AmazonS3FullAccess policy for the AWS user.</li>
+<li>Record your Access Key ID and show your secret access key.</li>
+</ol>
+</div>
+</div>
+<div class="section" id="enable-your-aws-s3-plugin">
+<h1>Enable your AWS_S3 plugin<a class="headerlink" href="#enable-your-aws-s3-plugin" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="edit-the-plugin-parameters">
+<h2>Edit the plugin parameters<a class="headerlink" href="#edit-the-plugin-parameters" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+<div class="section" id="optional-configure-apache-xsendfile">
+<h1>Optional - Configure apache <a class="reference external" href="https://github.com/DanielnetoDotCom/YouPHPTube/wiki/Moving-videos-directory-and-securing-files-from-direct-access-to-the-video-source-file#install-apache-xsendfile">xsendfile</a><a class="headerlink" href="#optional-configure-apache-xsendfile" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>Just in case you want to hide the S3 URL</div></blockquote>
+<div class="section" id="install-apache-xsendfile">
+<h2>Install apache xsendfile<a class="headerlink" href="#install-apache-xsendfile" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">libapache2</span><span class="o">-</span><span class="n">mod</span><span class="o">-</span><span class="n">xsendfile</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">a2enmod</span> <span class="n">xsendfile</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="configure-your-apache-xsendfile">
+<h2>Configure your apache XSendFile<a class="headerlink" href="#configure-your-apache-xsendfile" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apache2</span><span class="o">/</span><span class="n">apache2</span><span class="o">.</span><span class="n">conf</span>
+
+<span class="o">&lt;</span><span class="n">Directory</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">YouPHPTube</span><span class="o">/&gt;</span>
+    <span class="n">Options</span> <span class="n">Indexes</span> <span class="n">FollowSymLinks</span>
+    <span class="n">XSendFile</span> <span class="n">on</span>
+    <span class="n">XSendFilePath</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">YouPHPTube</span><span class="o">/</span>
+    <span class="n">AllowOverride</span> <span class="n">All</span>
+    <span class="n">Require</span> <span class="nb">all</span> <span class="n">granted</span>
+    <span class="n">Order</span> <span class="n">Allow</span><span class="p">,</span><span class="n">Deny</span>
+    <span class="n">Allow</span> <span class="kn">from</span> <span class="nn">All</span>
+<span class="o">&lt;/</span><span class="n">Directory</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">sudo</span> <span class="pre">service</span> <span class="pre">apache2</span> <span class="pre">reload</span></code></p>
+</div>
+<div class="section" id="uncomment-your-htaccess-file">
+<h2>Uncomment your .htaccess file<a class="headerlink" href="#uncomment-your-htaccess-file" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span>sudo nano /var/www/YouPHPTube/.htaccess
+
+&lt;IfModule mod_xsendfile.c&gt;
+    RewriteRule    ^videos/([A-Za-z0-9-_.]+)$ view/xsendfile.php?file=$1    [NC,L]
+&lt;/IfModule&gt;
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Vinzenz Hersche, Daniel Neto.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
