@@ -40,18 +40,16 @@ This is a project that is developed by us. Like for every other php-script, it's
 
 If problems appear, consider read the troubeshoot-guide downer. In case it does not solve it, follow the guide to do a proper issue at github.
 
-We support various systems and have some howto's to setup a entire server as well.
+Our code support various systems and we have some howto's to setup a entire server as well. Mainly, we support and test Apache and Ubuntu (and Nginx for live-streamer-setup). 
 
--  `How to install LAMP, FFMPEG and Git on a fresh Ubuntu 16.x For
-   YouPHPTube version 4.x or
-   newer <install/installUbuntu16.html>`__
--  `How to install LAMP, FFMPEG and Git on a fresh Ubuntu 18.x for
-   YouPHPTube version 4.x or
-   newer <install/installUbuntu18.html>`__
--  `Install YouPHPTube in Debian
-   9.3 <install/installDebian93.html>`__
--  `Nginx <install/nginx.html>`__
--  `MS IIS <install/iis.html>`__
+If you choose other systems, you propaply need to know them and maybe some general . If you like to provide a howto, this is welcome!
+
+-  `Install YouPHPTube-streamer and encoder on Ubuntu 16 <install/installUbuntu16.html>`__
+-  `Install YouPHPTube-streamer and encoder on Ubuntu 18 <install/installUbuntu18.html>`__
+-  `Install YouPHPTube-streamer and encoder on Debian 9.3 <install/installDebian93.html>`__
+-  `Setup live-stream (video-tutorial) <https://tutorials.youphptube.com/video/10-min-youphptube-stream-server-installation>`__
+-  `Nginx-support for  YouPHPTube-streamer and encoder <install/nginx.html>`__
+-  `MS IIS-support for YouPHPTube-streamer <install/iis.html>`__
 
 Configuration
 ^^^^^^^^^^^^^
@@ -97,16 +95,14 @@ prevent this, there are some things possible.
 - Use a host with mysqlnd enabled! We provide support for non-mysqlnd-host's, but we have a SQL-cache for mysqlnd only. Also, this is a fast, native driver (better performance anyway). If you are unshure if you have this, ask your hoster. 
 - Enable minify of javascript! This helps only, to reduce the bandwidth a little. Go to advanced customization-plugin and enable "Minify JS". Clear videos/cache after this! 
 - Enable the `Cache-Plugin <Cache-Plugin>`__ 
-- Disable (Gallery- and Youphpflix-plugin) and not set gifs (use less bandwidth)
+- Disable gifs(Gallery- and Youphpflix-plugin) or not set gifs (use less bandwidth)
 
 Livestream
 ^^^^^^^^^^
 
--  `Setup streamer
-   (video-tutorial) <https://tutorials.youphptube.com/video/10-min-youphptube-stream-server-installation>`__
+-  `Setup streamer (video-tutorial) <https://tutorials.youphptube.com/video/10-min-youphptube-stream-server-installation>`__
 -  `Record Live Stream <Record-Live-Stream>`__
--  `Configure NGINX Stream
-   Resolutions <Configure-NGINX-Stream-Resolutions>`__
+-  `Configure NGINX Stream Resolutions <Configure-NGINX-Stream-Resolutions>`__
 
 Troubleshooting
 ^^^^^^^^^^^^^^^
@@ -114,29 +110,20 @@ Troubleshooting
 Various things can cause problems. Here, you find steps that eventualy
 fix your problem. If it doesn't, please read `Check Ajax
 answer <Check-Ajax-answer>`__ and `How to find errors on
-YouPHPTube <How-to-find-errors-on-YouPHPTube>`__ for a usefull issue -
+YouPHPTube <howto/finderrors.html>`__ for a usefull issue -
 this makes it easier for us to help you.
 
--  Recheck, if all database-upgrades are done (**Menu -> Update
-   version**)
+-  Recheck, if all database-upgrades are done (**Menu -> Update version**)
 -  Clear the cache-folder (delete all files in **videos/cache/**)
 -  Ad-managment is broken? Try disable your adblocker
--  `How to find errors on
-   YouPHPTube <How-to-find-errors-on-YouPHPTube>`__
+-  `How to find errors on YouPHPTube <howto/finderrors.html>`__
 -  `Check Ajax answer <Check-Ajax-answer>`__
 -  `Mysql Troubleshooting <Mysql-Troubleshooting>`__
--  `Message when rewrite is not set / 404-Errors / install
-   rewrite-modules <Message-when-rewrite-is-not-set>`__
--  `Error while sending QUERY packet
-   cpanel <Error-while-sending-QUERY-packet-cpanel>`__
--  `How To Install a new Plugin <How-To-Install-a-new-Plugin>`__
--  `youdtube dl failed to extract
-   signature <youdtube-dl-failed-to-extract-signature>`__
--  `Encoder-Error We could not found your
-   streamer-site! <Encoder-Error-We-could-not-found-your-streamer-site!>`__
+-  `Message when rewrite is not set / 404-Errors / install rewrite-modules <Message-when-rewrite-is-not-set>`__
+-  `Error while sending QUERY packet cpanel <Error-while-sending-QUERY-packet-cpanel>`__
+-  `Encoder-Errors <trouble/encodertroubles.html>`__
 
 Known problems
 ^^^^^^^^^^^^^^
 
--  If the chart is not counting videos, try disable the
-   `Cache-Plugin <plugins/cache.html>`__.
+-  If the chart is not counting videos, try disable the `Cache-Plugin <plugins/cache.html>`__.

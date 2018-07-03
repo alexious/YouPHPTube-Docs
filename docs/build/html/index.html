@@ -213,18 +213,15 @@
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
 <p>This is a project that is developed by us. Like for every other php-script, it’s good to collect some admin-expiriences, so you can handle your system.</p>
 <p>If problems appear, consider read the troubeshoot-guide downer. In case it does not solve it, follow the guide to do a proper issue at github.</p>
-<p>We support various systems and have some howto’s to setup a entire server as well.</p>
+<p>Our code support various systems and we have some howto’s to setup a entire server as well. Mainly, we support and test Apache and Ubuntu (and Nginx for live-streamer-setup).</p>
+<p>If you choose other systems, you propaply need to know them and maybe some general . If you like to provide a howto, this is welcome!</p>
 <ul class="simple">
-<li><a class="reference external" href="install/installUbuntu16.html">How to install LAMP, FFMPEG and Git on a fresh Ubuntu 16.x For
-YouPHPTube version 4.x or
-newer</a></li>
-<li><a class="reference external" href="install/installUbuntu18.html">How to install LAMP, FFMPEG and Git on a fresh Ubuntu 18.x for
-YouPHPTube version 4.x or
-newer</a></li>
-<li><a class="reference external" href="install/installDebian93.html">Install YouPHPTube in Debian
-9.3</a></li>
-<li><a class="reference external" href="install/nginx.html">Nginx</a></li>
-<li><a class="reference external" href="install/iis.html">MS IIS</a></li>
+<li><a class="reference external" href="install/installUbuntu16.html">Install YouPHPTube-streamer and encoder on Ubuntu 16</a></li>
+<li><a class="reference external" href="install/installUbuntu18.html">Install YouPHPTube-streamer and encoder on Ubuntu 18</a></li>
+<li><a class="reference external" href="install/installDebian93.html">Install YouPHPTube-streamer and encoder on Debian 9.3</a></li>
+<li><a class="reference external" href="https://tutorials.youphptube.com/video/10-min-youphptube-stream-server-installation">Setup live-stream (video-tutorial)</a></li>
+<li><a class="reference external" href="install/nginx.html">Nginx-support for  YouPHPTube-streamer and encoder</a></li>
+<li><a class="reference external" href="install/iis.html">MS IIS-support for YouPHPTube-streamer</a></li>
 </ul>
 </div>
 <div class="section" id="configuration">
@@ -270,51 +267,40 @@ prevent this, there are some things possible.</p>
 <li>Use a host with mysqlnd enabled! We provide support for non-mysqlnd-host’s, but we have a SQL-cache for mysqlnd only. Also, this is a fast, native driver (better performance anyway). If you are unshure if you have this, ask your hoster.</li>
 <li>Enable minify of javascript! This helps only, to reduce the bandwidth a little. Go to advanced customization-plugin and enable “Minify JS”. Clear videos/cache after this!</li>
 <li>Enable the <a class="reference external" href="Cache-Plugin">Cache-Plugin</a></li>
-<li>Disable (Gallery- and Youphpflix-plugin) and not set gifs (use less bandwidth)</li>
+<li>Disable gifs(Gallery- and Youphpflix-plugin) or not set gifs (use less bandwidth)</li>
 </ul>
 </div>
 <div class="section" id="livestream">
 <h1>Livestream<a class="headerlink" href="#livestream" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><a class="reference external" href="https://tutorials.youphptube.com/video/10-min-youphptube-stream-server-installation">Setup streamer
-(video-tutorial)</a></li>
+<li><a class="reference external" href="https://tutorials.youphptube.com/video/10-min-youphptube-stream-server-installation">Setup streamer (video-tutorial)</a></li>
 <li><a class="reference external" href="Record-Live-Stream">Record Live Stream</a></li>
-<li><a class="reference external" href="Configure-NGINX-Stream-Resolutions">Configure NGINX Stream
-Resolutions</a></li>
+<li><a class="reference external" href="Configure-NGINX-Stream-Resolutions">Configure NGINX Stream Resolutions</a></li>
 </ul>
 </div>
 <div class="section" id="troubleshooting">
 <h1>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h1>
 <p>Various things can cause problems. Here, you find steps that eventualy
 fix your problem. If it doesn’t, please read <a class="reference external" href="Check-Ajax-answer">Check Ajax
-answer</a> and <a class="reference external" href="How-to-find-errors-on-YouPHPTube">How to find errors on
+answer</a> and <a class="reference external" href="howto/finderrors.html">How to find errors on
 YouPHPTube</a> for a usefull issue -
 this makes it easier for us to help you.</p>
 <ul class="simple">
-<li>Recheck, if all database-upgrades are done (<strong>Menu -&gt; Update
-version</strong>)</li>
+<li>Recheck, if all database-upgrades are done (<strong>Menu -&gt; Update version</strong>)</li>
 <li>Clear the cache-folder (delete all files in <strong>videos/cache/</strong>)</li>
 <li>Ad-managment is broken? Try disable your adblocker</li>
-<li><a class="reference external" href="How-to-find-errors-on-YouPHPTube">How to find errors on
-YouPHPTube</a></li>
+<li><a class="reference external" href="howto/finderrors.html">How to find errors on YouPHPTube</a></li>
 <li><a class="reference external" href="Check-Ajax-answer">Check Ajax answer</a></li>
 <li><a class="reference external" href="Mysql-Troubleshooting">Mysql Troubleshooting</a></li>
-<li><a class="reference external" href="Message-when-rewrite-is-not-set">Message when rewrite is not set / 404-Errors / install
-rewrite-modules</a></li>
-<li><a class="reference external" href="Error-while-sending-QUERY-packet-cpanel">Error while sending QUERY packet
-cpanel</a></li>
-<li><a class="reference external" href="How-To-Install-a-new-Plugin">How To Install a new Plugin</a></li>
-<li><a class="reference external" href="youdtube-dl-failed-to-extract-signature">youdtube dl failed to extract
-signature</a></li>
-<li><a class="reference external" href="Encoder-Error-We-could-not-found-your-streamer-site!">Encoder-Error We could not found your
-streamer-site!</a></li>
+<li><a class="reference external" href="Message-when-rewrite-is-not-set">Message when rewrite is not set / 404-Errors / install rewrite-modules</a></li>
+<li><a class="reference external" href="Error-while-sending-QUERY-packet-cpanel">Error while sending QUERY packet cpanel</a></li>
+<li><a class="reference external" href="trouble/encodertroubles.html">Encoder-Errors</a></li>
 </ul>
 </div>
 <div class="section" id="known-problems">
 <h1>Known problems<a class="headerlink" href="#known-problems" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li>If the chart is not counting videos, try disable the
-<a class="reference external" href="plugins/cache.html">Cache-Plugin</a>.</li>
+<li>If the chart is not counting videos, try disable the <a class="reference external" href="plugins/cache.html">Cache-Plugin</a>.</li>
 </ul>
 </div>
 
