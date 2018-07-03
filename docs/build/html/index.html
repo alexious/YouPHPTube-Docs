@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welcome to youphptube’s doc &mdash; YouPHPTube  documentation</title>
+  <title>Welcome to YouPHPTube’s doc &mdash; YouPHPTube  documentation</title>
   
 
   
@@ -78,15 +78,14 @@
             
               <!-- Local TOC -->
               <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Welcome to youphptube’s doc</a></li>
+<li><a class="reference internal" href="#">Welcome to YouPHPTube’s doc</a></li>
 <li><a class="reference internal" href="#installation">Installation</a></li>
 <li><a class="reference internal" href="#configuration">Configuration</a></li>
 <li><a class="reference internal" href="#plugins">Plugins</a></li>
-<li><a class="reference internal" href="#paid-plugins">Paid plugins</a></li>
-<li><a class="reference internal" href="#update-youphptube">Update youphptube</a></li>
+<li><a class="reference internal" href="#paid-plugins-support-and-development">Paid plugins, support and development</a></li>
 <li><a class="reference internal" href="#performance">Performance</a></li>
 <li><a class="reference internal" href="#livestream">Livestream</a></li>
-<li><a class="reference internal" href="#various">Various</a></li>
+<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
 <li><a class="reference internal" href="#known-problems">Known problems</a></li>
 </ul>
 </div>
@@ -133,7 +132,7 @@
     
       <li><a href="#">Docs</a> &raquo;</li>
         
-      <li>Welcome to youphptube’s doc</li>
+      <li>Welcome to YouPHPTube’s doc</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -153,7 +152,8 @@
            <div itemprop="articleBody">
             
   <div class="section" id="welcome-to-youphptube-s-doc">
-<h1>Welcome to youphptube’s doc<a class="headerlink" href="#welcome-to-youphptube-s-doc" title="Permalink to this headline">¶</a></h1>
+<h1>Welcome to YouPHPTube’s doc<a class="headerlink" href="#welcome-to-youphptube-s-doc" title="Permalink to this headline">¶</a></h1>
+<p>You just find a open video-plattform.</p>
 <p>This project has a huge functionality and can be used for various scenarios.</p>
 <p>For example, we provide:</p>
 <ul class="simple">
@@ -230,6 +230,8 @@ newer</a></li>
 <div class="section" id="configuration">
 <h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
+<li><a class="reference external" href="howto/update.html">How to update your YouPHPTube</a></li>
+<li><a class="reference external" href="howto/installplugin.html">Howto Install a new Plugin</a></li>
 <li><a class="reference external" href="Automatic-Thumbs-(JPG-GIF)-on-direct-uploaded-MP4-videos">Automatic Thumbs (JPG-GIF) on direct uploaded MP4
 videos</a></li>
 <li><a class="reference external" href="Setting-up-YouPHPTube-to-send-emails">Setting up YouPHPTube to send
@@ -246,22 +248,18 @@ emails</a></li>
 <li><a class="reference external" href="plugins/cache.html">Cache-Plugin</a>.</li>
 </ul>
 </div>
-<div class="section" id="paid-plugins">
-<h1>Paid plugins<a class="headerlink" href="#paid-plugins" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="paid-plugins-support-and-development">
+<h1>Paid plugins, support and development<a class="headerlink" href="#paid-plugins-support-and-development" title="Permalink to this headline">¶</a></h1>
 <p>We have some advanced functionality in form of plugins, we sell. Please
 have a look at <a class="reference external" href="https://easytube.club">https://easytube.club</a> .</p>
-<p>Some examples:
-- Change resolutions
-- Subtitles
-- Secure videos folder
-- VR360-Video
-- Livesearch
-- and many more…</p>
-</div>
-<div class="section" id="update-youphptube">
-<h1>Update youphptube<a class="headerlink" href="#update-youphptube" title="Permalink to this headline">¶</a></h1>
+<p>Some examples:</p>
 <ul class="simple">
-<li><a class="reference external" href="How-to-Update-your-YouPHPTube">How to update your YouPHPTube</a></li>
+<li>Change resolutions</li>
+<li>Subtitles</li>
+<li>Secure videos folder</li>
+<li>VR360-Video</li>
+<li>Livesearch</li>
+<li>and many more…</li>
 </ul>
 </div>
 <div class="section" id="performance">
@@ -270,11 +268,10 @@ have a look at <a class="reference external" href="https://easytube.club">https:
 prevent this, there are some things possible.</p>
 <ul class="simple">
 <li>Use a host with mysqlnd enabled! We provide support for non-mysqlnd-host’s, but we have a SQL-cache for mysqlnd only. Also, this is a fast, native driver (better performance anyway). If you are unshure if you have this, ask your hoster.</li>
-<li>Enable minify of javascript! This helps only, to reduce the bandwidth a little. Go to advanced customization-plugin and enable</li>
+<li>Enable minify of javascript! This helps only, to reduce the bandwidth a little. Go to advanced customization-plugin and enable “Minify JS”. Clear videos/cache after this!</li>
+<li>Enable the <a class="reference external" href="Cache-Plugin">Cache-Plugin</a></li>
+<li>Disable (Gallery- and Youphpflix-plugin) and not set gifs (use less bandwidth)</li>
 </ul>
-<p>“Minify JS”. Clear videos/cache after this!
-- Enable the <a class="reference external" href="Cache-Plugin">Cache-Plugin</a>
-- Disable (Gallery- and Youphpflix-plugin) and not set gifs (use less bandwidth)</p>
 </div>
 <div class="section" id="livestream">
 <h1>Livestream<a class="headerlink" href="#livestream" title="Permalink to this headline">¶</a></h1>
@@ -286,14 +283,8 @@ prevent this, there are some things possible.</p>
 Resolutions</a></li>
 </ul>
 </div>
-<div class="section" id="various">
-<h1>Various<a class="headerlink" href="#various" title="Permalink to this headline">¶</a></h1>
-<ul>
-<li><p class="first"><a class="reference external" href="How-To-Install-a-new-Plugin">Howto Install a new Plugin</a></p>
-</li>
-<li><p class="first rubric" id="troubleshooting">Troubleshooting</p>
-</li>
-</ul>
+<div class="section" id="troubleshooting">
+<h1>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h1>
 <p>Various things can cause problems. Here, you find steps that eventualy
 fix your problem. If it doesn’t, please read <a class="reference external" href="Check-Ajax-answer">Check Ajax
 answer</a> and <a class="reference external" href="How-to-find-errors-on-YouPHPTube">How to find errors on
@@ -323,7 +314,7 @@ streamer-site!</a></li>
 <h1>Known problems<a class="headerlink" href="#known-problems" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li>If the chart is not counting videos, try disable the
-<a class="reference external" href="Cache-Plugin">Cache-Plugin</a>.</li>
+<a class="reference external" href="plugins/cache.html">Cache-Plugin</a>.</li>
 </ul>
 </div>
 

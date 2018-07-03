@@ -7,50 +7,66 @@ fine-tune both the streamer and the encoder.
 Options
 =======
 
-$obj->doNotShowUploadMP4Button = false;
----------------------------------------
+doNotShowUploadMP4Button
+------------------------
+
+Default: false / unchecked
 
 If you set it to true users will not be able to see the "Upload a MP4
 video" button
 
-$obj->doNotShowEncoderButton = false;
--------------------------------------
+doNotShowEncoderButton
+----------------------
+
+Default: false / unchecked
 
 If you set it to true users will not be able to see the "Encode video
 and audio" button
 
-$obj->doNotShowEmbedButton = false;
------------------------------------
+doNotShowEmbedButton
+--------------------
+
+Default: false / unchecked
 
 If you set it to true users will not be able to see the "Embed a video
 link" button
 
-$obj->doNotShowEncoderResolutionLow = false;
---------------------------------------------
+doNotShowEncoderResolutionLow
+-----------------------------
+
+Default: false / unchecked
 
 If you set it to true users will not be able to see the option on
 encoder to convert videos to **Low Resolution**
 
-$obj->doNotShowEncoderResolutionSD = false;
--------------------------------------------
+doNotShowEncoderResolutionSD
+----------------------------
+
+Default: false / unchecked
 
 If you set it to true users will not be able to see the option on
 encoder to convert videos to **SD Resolution**
 
-$obj->doNotShowEncoderResolutionHD = false;
--------------------------------------------
+doNotShowEncoderResolutionHD
+----------------------------
+
+Default: false / unchecked
 
 If you set it to true users will not be able to see the option on
 encoder to convert videos to **HD Resolution**
 
-$obj->disableNativeSignUp = false;
-----------------------------------
+disableNativeSignUp
+-------------------
+
+Default: false / unchecked
 
 If you set it to true you will disable native sign up system, you will
 need an OAuth2 authentication method, like Facebook, Google, etc
 
-$obj->disableNativeSignIn = false;
-----------------------------------
+disableNativeSignIn
+-------------------
+
+Default: false / unchecked
 
 If you set it to true users will disable native sign in system. be
 careful **you must make one of your OAuth users as an Admin**, otherwise

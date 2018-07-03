@@ -1,5 +1,7 @@
-Welcome to youphptube's doc
+Welcome to YouPHPTube's doc
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You just find a open video-plattform.
 
 This project has a huge functionality and can be used for various scenarios.
 
@@ -54,6 +56,8 @@ We support various systems and have some howto's to setup a entire server as wel
 Configuration
 ^^^^^^^^^^^^^
 
+-  `How to update your YouPHPTube <howto/update.html>`__
+-  `Howto Install a new Plugin <howto/installplugin.html>`__
 -  `Automatic Thumbs (JPG-GIF) on direct uploaded MP4
    videos <Automatic-Thumbs-(JPG-GIF)-on-direct-uploaded-MP4-videos>`__
 -  `Setting up YouPHPTube to send
@@ -69,24 +73,20 @@ Plugins
 - `Cache-Plugin <plugins/cache.html>`__.
 
 
-Paid plugins
-^^^^^^^^^^^^
+Paid plugins, support and development
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We have some advanced functionality in form of plugins, we sell. Please
 have a look at https://easytube.club .
 
-Some examples: 
+Some examples:
+
 - Change resolutions 
 - Subtitles 
 - Secure videos folder 
 - VR360-Video 
 - Livesearch 
 - and many more...
-
-Update youphptube
-^^^^^^^^^^^^^^^^^
-
--  `How to update your YouPHPTube <How-to-Update-your-YouPHPTube>`__
 
 Performance
 ^^^^^^^^^^^
@@ -95,9 +95,7 @@ When you have a lot of users, your server can reach it's limits. To
 prevent this, there are some things possible. 
 
 - Use a host with mysqlnd enabled! We provide support for non-mysqlnd-host's, but we have a SQL-cache for mysqlnd only. Also, this is a fast, native driver (better performance anyway). If you are unshure if you have this, ask your hoster. 
-
-- Enable minify of javascript! This helps only, to reduce the bandwidth a little. Go to advanced customization-plugin and enable
-"Minify JS". Clear videos/cache after this! 
+- Enable minify of javascript! This helps only, to reduce the bandwidth a little. Go to advanced customization-plugin and enable "Minify JS". Clear videos/cache after this! 
 - Enable the `Cache-Plugin <Cache-Plugin>`__ 
 - Disable (Gallery- and Youphpflix-plugin) and not set gifs (use less bandwidth)
 
@@ -110,12 +108,8 @@ Livestream
 -  `Configure NGINX Stream
    Resolutions <Configure-NGINX-Stream-Resolutions>`__
 
-Various
-^^^^^^^
-
--  `Howto Install a new Plugin <How-To-Install-a-new-Plugin>`__
--  .. rubric:: Troubleshooting
-      :name: troubleshooting
+Troubleshooting
+^^^^^^^^^^^^^^^
 
 Various things can cause problems. Here, you find steps that eventualy
 fix your problem. If it doesn't, please read `Check Ajax
@@ -145,4 +139,4 @@ Known problems
 ^^^^^^^^^^^^^^
 
 -  If the chart is not counting videos, try disable the
-   `Cache-Plugin <Cache-Plugin>`__.
+   `Cache-Plugin <plugins/cache.html>`__.
