@@ -36,7 +36,7 @@ For more information, read our `Readme <readme.html>`__
 Installation
 ^^^^^^^^^^^^
 
-This is a project that is developed by us. Like for every other php-script, it's good to collect some admin-expiriences, so you can handle your system.
+This is a project is developed by a few people. Like for every other php-script, this project requires some little expirience. We provide a rudimentary setup-howto for some systems. For advance your installation for further purposes, please search for apache-, php- or mysql-howtos for the systemadministrator-work. We simply can't answer all sysadmin-related questions and a lot of topics are covered already out there.
 
 If problems appear, consider read the troubeshoot-guide downer. In case it does not solve it, follow the guide to do a proper issue at github.
 
@@ -117,6 +117,8 @@ this makes it easier for us to help you.
 -  Recheck, if all database-upgrades are done (**Menu -> Update version**)
 -  Clear the cache-folder (delete all files in **videos/cache/**)
 -  Ad-managment is broken? Try disable your adblocker
+-  Increase **default_socket_timeout** in **php.ini** (**default_socket_timeout=900** seems to do a good job)
+-  In case of changed **tmp**-directory, change it back to default
 -  `How to find errors on YouPHPTube <howto/finderrors.html>`__
 -  `Check Ajax answer <Check-Ajax-answer>`__
 -  `Mysql Troubleshooting <Mysql-Troubleshooting>`__

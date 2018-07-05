@@ -211,7 +211,7 @@
 </div>
 <div class="section" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
-<p>This is a project that is developed by us. Like for every other php-script, it’s good to collect some admin-expiriences, so you can handle your system.</p>
+<p>This is a project is developed by a few people. Like for every other php-script, this project requires some little expirience. We provide a rudimentary setup-howto for some systems. For advance your installation for further purposes, please search for apache-, php- or mysql-howtos for the systemadministrator-work. We simply can’t answer all sysadmin-related questions and a lot of topics are covered already out there.</p>
 <p>If problems appear, consider read the troubeshoot-guide downer. In case it does not solve it, follow the guide to do a proper issue at github.</p>
 <p>Our code support various systems and we have some howto’s to setup a entire server as well. Mainly, we support and test Apache and Ubuntu (and Nginx for live-streamer-setup).</p>
 <p>If you choose other systems, you propaply need to know them and maybe some general . If you like to provide a howto, this is welcome!</p>
@@ -290,6 +290,8 @@ this makes it easier for us to help you.</p>
 <li>Recheck, if all database-upgrades are done (<strong>Menu -&gt; Update version</strong>)</li>
 <li>Clear the cache-folder (delete all files in <strong>videos/cache/</strong>)</li>
 <li>Ad-managment is broken? Try disable your adblocker</li>
+<li>Increase <strong>default_socket_timeout</strong> in <strong>php.ini</strong> (<strong>default_socket_timeout=900</strong> seems to do a good job)</li>
+<li>In case of changed <strong>tmp</strong>-directory, change it back to default</li>
 <li><a class="reference external" href="howto/finderrors.html">How to find errors on YouPHPTube</a></li>
 <li><a class="reference external" href="Check-Ajax-answer">Check Ajax answer</a></li>
 <li><a class="reference external" href="Mysql-Troubleshooting">Mysql Troubleshooting</a></li>
