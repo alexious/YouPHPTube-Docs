@@ -12,8 +12,8 @@ For example, we provide:
         - Local MP4 and Audio
         - linked MP4 and Audio
         - Live-streams
-        - Torrent MP4 (in development)
-        - AWS S3-compatible Storage (commercial plugin)
+        - `Torrent MP4 (in development) <howto/torrent.html>`__
+        - `AWS S3-compatible Storage (commercial plugin) <plugins/aws.html>`__
         
     - Various plugins
         - A lot of plugins allow you to customize
