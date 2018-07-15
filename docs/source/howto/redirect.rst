@@ -1,3 +1,6 @@
+Redirect http to https
+~~~~~~~~~~~~~~~~~~~~~~
+
 It can be nice to force https by redirect all http-content to it.
 
 This job is basicly done by the webserver itself and therefore it is a
@@ -93,8 +96,31 @@ https://stackoverflow.com/questions/4083221/how-to-redirect-all-http-requests-to
 Nginx
 ~~~~~
 
+Here, you find 2 ways how you can handle this.
+
+If-method (by certbot)
+^^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    server {
+        if ($host = anydomain.com) {
+            return 301 https://$host$request_uri;
+        }
+
+        if ($host = www.anydomain.com) {
+            return 301 https://anydomain.com$request_uri;
+        }
+        listen 80;
+    }
+    
+Under debian, put this to **/etc/nginx/sites-enabled/anydomaincom**.
+
+Other method
+^^^^^^^^^^^^
+
 This is a redirect-example for nginx. If you use nginx, some more
-expirience is good anyway. The config-files are like always in /etc,
+expirience is good anyway. The config-files are like always in /etc/nginx,
 what's the exact name for nginx can depend.
 
 ::

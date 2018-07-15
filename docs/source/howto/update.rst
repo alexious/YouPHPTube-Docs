@@ -1,3 +1,6 @@
+Update
+------
+
 There are two ways to do it:
 
 1 - Git Pull (Recommended)
@@ -33,6 +36,8 @@ usually they get this error:
     ... Please, commit your changes or stash them before you can merge.
     Aborting
 
+
+    
 the solution is to force to overwrite your files, you can do this
 command.
 
@@ -47,6 +52,9 @@ https://tutorials.youphptube.com/video/force-git-to-overwrite-files
 Use your favorite file transfer to download a `master copy of
 YouPHPTube <https://github.com/DanielnetoDotCom/YouPHPTube/archive/master.zip>`__
 and upload it to your site.
+
+Unzip it and replace all files in your YouPHPTube-root. Do not clear or replace the **videos**-folder.
+
 
 Always - Database-update!
 -------------------------

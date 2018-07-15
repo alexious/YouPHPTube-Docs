@@ -44,6 +44,7 @@ Our code support various systems and we have some howto's to setup a entire serv
 
 If you choose other systems, you propaply need to know them and maybe some general . If you like to provide a howto, this is welcome!
 
+-  `Install YouPHPTube-streamer on simple webspace <install/installWebspace.html>`__
 -  `Install YouPHPTube-streamer and encoder on Ubuntu 16 <install/installUbuntu16.html>`__
 -  `Install YouPHPTube-streamer and encoder on Ubuntu 18 <install/installUbuntu18.html>`__
 -  `Install YouPHPTube-streamer and encoder on Debian 9.3 <install/installDebian93.html>`__
