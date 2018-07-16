@@ -33,6 +33,11 @@ For example, we provide:
 
 For more information, read our `Readme <readme.html>`__
 
+For users and developers
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+The main-purpose of this documentation are admins. But we also have documentation for `users <howto/user.html>`__ and `developers <howto/developer.html>`__
+
 Installation
 ^^^^^^^^^^^^
 
