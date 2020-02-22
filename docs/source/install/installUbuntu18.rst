@@ -2,9 +2,9 @@
 
 **This Tutorial will teach you how to install YouPHPTube Streamer Site
 what means it is the front end of YouPHPTube. You can watch it running
-at https://demo.youphptube.com/ or https://tutorials.youphptube.com/**
+at https://demo.avideo.com/ or https://tutorials.avideo.com/**
 
-**If for any reason you need help to set up the YouPHPTube app or the server, fell free to ask us for help:**
+**If for any reason you need help to set up the AVideo/YouPHPTube app or the server, fell free to ask us for help:**
 
 **https://www.youphptube.com/services**
 
@@ -17,7 +17,7 @@ code:
 
 or if you want just the encoder use this:
 
-``sudo apt-get install apache2 php libapache2-mod-php php-mysql php-curl php-gd php-intl mysql-server mysql-client git && cd /var/www/html && sudo git clone https://github.com/DanielnetoDotCom/YouPHPTube.git``
+``sudo apt-get install apache2 php libapache2-mod-php php-mysql php-curl php-gd php-intl mysql-server mysql-client git && cd /var/www/html && sudo git clone https://github.com/WWBN/AVideo.git``
 
 Also, you need those commands for concrete Ubuntu 18 (it's not in the
 upper command because it's not tested):
@@ -56,7 +56,7 @@ Replace NEWPASSWORD with your password.
 Source and more info is
 `here <https://linuxconfig.org/how-to-reset-root-mysql-password-on-ubuntu-18-04-bionic-beaver-linux>`__,
 maybe also `Issue
-796 <https://github.com/DanielnetoDotCom/YouPHPTube/issues/796>`__ can
+796 <https://github.com/WWBN/AVideo/issues/796>`__ can
 help you.
 
 Do not forget the "Rewrite-modules"-steps downer! If you have
@@ -72,8 +72,8 @@ this helps you or give us more info, what's failing.
 
     sudo apt-get install apache2 php libapache2-mod-php php-mysql php-curl php-gd php-intl mysql-server mysql-client ffmpeg git libimage-exiftool-perl php-mbstring php-gettext python
     cd /var/www/html
-    sudo git clone https://github.com/DanielnetoDotCom/YouPHPTube.git
-    sudo git clone https://github.com/DanielnetoDotCom/YouPHPTube-Encoder.git # only for encoder
+    sudo git clone https://github.com/WWBN/AVideo.git
+    sudo git clone https://github.com/WWBN/AVideo-Encoder.git # only for encoder
     sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl # only for encoder
     sudo chmod a+rx /usr/local/bin/youtube-dl # only for encoder
     sudo a2enmod rewrite
@@ -128,12 +128,12 @@ or
 **The Encoder** We recommend that you use an YouPHPTube Encoder
 privately, it is also available for free and open source and you can
 download it
-`here <https://github.com/DanielnetoDotCom/YouPHPTube-Encoder>`__ and
+`here <https://github.com/WWBN/AVideo-Encoder>`__ and
 also we made some `installation
-instructions <https://github.com/DanielnetoDotCom/YouPHPTube-Encoder/wiki/How-to-install-LAMP,--FFMPEG-and-Git-on-a-fresh-Ubuntu-18.x---For-YouPHPTube-Encoder>`__.
+instructions <https://github.com/WWBN/AVideo-Encoder/wiki/How-to-install-LAMP,--FFMPEG-and-Git-on-a-fresh-Ubuntu-18.x---For-YouPHPTube-Encoder>`__.
 But if you are limited in hardware or software resources feel free to
-use our public encoder https://encoder.youphptube.com/
+use our public encoder network https://network.avideo.com/
 
 We hope you have fun! If you need help, have any question or Issue
 please open an Issue on
-https://github.com/DanielnetoDotCom/YouPHPTube/issues
+https://github.com/WWBN/AVideo/issues
